@@ -1,0 +1,161 @@
+<HTml:5></HTml:5>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECODATA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header class="header-principal">
+        <nav class="navbar">
+            <div class="logo"><strong>ECO</strong>DATA</div>
+            <ul class="menu-navegacion">
+                <li><a href="#mapa-colombia">Mapa</a></li>
+                <li><a href="#lugares-turisticos">Destinos</a></li>
+                <li><a href="#biodiversidad-info">Biodiversidad</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN 1: MAPA DE COLOMBIA AL INICIO -->
+        <section id="mapa-colombia" class="seccion-hero-mapa">
+            <div class="encabezado-hero">
+                <h1>Biodiversidad de Colombia</h1>
+                <p>Explora el mapa y descubre los destinos turísticos.</p>
+            </div>
+            
+            <div class="contenedor-mapa">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkbH5ay-kxpxuHqdXGtHQP0pYrsIUSogR_5DItSv3eEg&s=10" alt="Mapa de Colombia" class="imagen-mapa-real">
+
+                <!-- PINES UBICADOS SOBRE EL MAPA -->
+                <div class="pin-mapa" style="top: 15%; left: 45%;">
+                    <button class="icono-marcador">📍</button>
+                    <div class="tarjeta-info-pin">
+                        <h3>PNN Tayrona</h3>
+                        <a href="#lugares-turisticos" class="btn-ver-senderos">Ver Destino</a>
+                    </div>
+                </div>
+
+                <div class="pin-mapa" style="top: 45%; left: 25%;">
+                    <button class="icono-marcador">📍</button>
+                    <div class="tarjeta-info-pin">
+                        <h3>Nuquí</h3>
+                        <a href="#lugares-turisticos" class="btn-ver-senderos">Ver Destino</a>
+                    </div>
+                </div>
+
+                <div class="pin-mapa" style="top: 50%; left: 40%;">
+                    <button class="icono-marcador">📍</button>
+                    <div class="tarjeta-info-pin">
+                        <h3>Valle del Cocora</h3>
+                        <a href="#lugares-turisticos" class="btn-ver-senderos">Ver Destino</a>
+                    </div>
+                </div>
+
+                <div class="pin-mapa" style="top: 60%; left: 60%;">
+                    <button class="icono-marcador">📍</button>
+                    <div class="tarjeta-info-pin">
+                        <h3>Caño Cristales</h3>
+                        <a href="#lugares-turisticos" class="btn-ver-senderos">Ver Destino</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: SITIOS TURÍSTICOS CON TUS LINKS DE IMÁGENES -->
+        <section id="lugares-turisticos" class="seccion-destinos">
+            <div class="cabecera-seccion">
+                <h2>Sitios Turísticos</h2>
+            </div>
+
+            <div class="grid-destinos">
+                <!-- Destino 1 -->
+                <article class="carta-destino">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsYF15J-lm6HXv9ChQwrVoGslnxk-Z2jNyrND05DGg0A&s=10" alt="Tayrona" class="img-destino">
+                    <div class="info-destino">
+                        <h3>Parque Tayrona</h3>
+                        <p>Selva tropical y playas del Caribe.</p>
+                    </div>
+                </article>
+
+                <!-- Destino 2 -->
+                <article class="carta-destino">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNWC2qFc4pwd9QE-vyteGrYCkI1_MaKfSJdVa125gPoQ&s=10" alt="Valle del Cocora" class="img-destino">
+                    <div class="info-destino">
+                        <h3>Valle del Cocora</h3>
+                        <p>El hogar de la palma de cera.</p>
+                    </div>
+                </article>
+
+                <!-- Destino 3 -->
+                <article class="carta-destino">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy1-go49sbu5r1vfQbWeUGog8N70zX8U__gzDLhpHtXg&s=10" alt="Nuquí" class="img-destino">
+                    <div class="info-destino">
+                        <h3>Nuquí</h3>
+                        <p>Selva y mar en el Pacífico.</p>
+                    </div>
+                </article>
+
+                <!-- Destino 4 -->
+                <article class="carta-destino">
+                    <img src="data:image/jpeg;base64,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" alt="Caño Cristales" class="img-destino">
+                    <div class="info-destino">
+                        <h3>Caño Cristales</h3>
+                        <p>El río de los cinco colores.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: BIODIVERSIDAD (ANFIBIOS, FLORES Y FAUNA CON ESPACIO PARA IMAGEN) -->
+        <section id="biodiversidad-info" class="seccion-galeria-bio">
+            <div class="cabecera-seccion">
+                <h2>¿Por qué Colombia?</h2>
+                <p>Explora nuestra riqueza en fauna y flora.</p>
+            </div>
+            
+            <div class="grid-biodiversidad">
+                <!-- Cuadro 1: Anfibios -->
+                <article class="carta-especie">
+                    <!-- Cambia "anfibios.jpg" por el link o nombre de tu imagen -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3aCIzoyag_nzEWzdXdOw7et1lmcOLPvJ8p2sf_lRCRQ&s=10" alt="Anfibios" class="img-destino">
+                    <div class="contenido-especie">
+                        <h3>Anfibios</h3>
+                        <p>Gran variedad de especies únicas en las selvas húmedas.</p>
+                    </div>
+                </article>
+
+                <!-- Cuadro 2: Flores -->
+                <article class="carta-especie">
+                    <!-- Cambia "flores.jpg" por el link o nombre de tu imagen -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS27DUKsFRV9aNQpuAHukNwmeV54OMtypQ5b2lMfKrT-w&s=10" alt="Flores" class="img-destino">
+                    <div class="contenido-especie">
+                        <h3>Flores</h3>
+                        <p>Miles de variedades de orquídeas y flora endémica.</p>
+                    </div>
+                </article>
+
+                <!-- Cuadro 3: Fauna -->
+                <article class="carta-especie">
+                    <!-- Cambia "fauna.jpg" por el link o nombre de tu imagen -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXeR2fYNyA03TNFOi9oRLjEKOBA_qsrkjJqn-BnNVrBA&s=10" alt="Fauna" class="img-destino">
+                    <div class="contenido-especie">
+                        <h3>Fauna</h3>
+                        <p>Aves, mamíferos y especies representativas de nuestros bosques.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-principal">
+        <p>&copy; 2026 ECODATA</p>
+    </footer>
+
+</body>
+</html>
