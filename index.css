@@ -1,0 +1,347 @@
+/* =========================================
+   VARIABLES DE COLOR (Verdes y Azules Pasteles)
+   ========================================= */
+:root {
+    --verde-pastel: #A3B18A;
+    --verde-claro-suave: #D8F3DC;
+    --verde-menta: #B7E4C7;
+    --verde-oscuro: #3A5A40;
+    
+    --azul-pastel: #BDE0FE;
+    --azul-cielo-suave: #A2D2FF;
+    --azul-profundo: #1D3557;
+    
+    --fondo-sitio: #F4F9F5;
+    --blanco: #FFFFFF;
+    --texto-principal: #2B2D42;
+    --texto-secundario: #555B6E;
+}
+
+/* =========================================
+   ESTILOS GENERALES
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--fondo-sitio);
+    color: var(--texto-principal);
+    line-height: 1.6;
+}
+
+a { text-decoration: none; }
+ul { list-style: none; }
+
+/* =========================================
+   CABECERA Y NAVEGACIÓN
+   ========================================= */
+.header-principal {
+    background-color: var(--verde-oscuro);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo {
+    color: var(--blanco);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.logo strong { color: var(--azul-pastel); }
+
+.menu-navegacion {
+    display: flex;
+    gap: 25px;
+}
+
+.menu-navegacion a {
+    color: var(--blanco);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu-navegacion a:hover { color: var(--azul-pastel); }
+
+/* =========================================
+   SECCIÓN HERO Y MAPA
+   ========================================= */
+.seccion-hero-mapa {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.encabezado-hero h1 {
+    font-size: 2.5rem;
+    color: var(--verde-oscuro);
+    margin-bottom: 10px;
+}
+
+.encabezado-hero p {
+    font-size: 1.1rem;
+    color: var(--texto-secundario);
+    margin-bottom: 30px;
+}
+
+.contenedor-mapa {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    height: 520px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--azul-pastel), var(--verde-menta));
+    border: 6px solid var(--blanco);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(163, 177, 138, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aviso-mapa {
+    color: var(--verde-oscuro);
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.6);
+}
+
+.pin-mapa {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.icono-marcador {
+    background: var(--blanco);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s;
+}
+
+.icono-marcador:hover {
+    transform: scale(1.25);
+}
+
+.tarjeta-info-pin {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--blanco);
+    width: 210px;
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    border-top: 4px solid var(--verde-pastel);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    text-align: left;
+    z-index: 100;
+}
+
+.pin-mapa:hover .tarjeta-info-pin {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.tarjeta-info-pin h3 {
+    font-size: 1rem;
+    color: var(--verde-oscuro);
+    margin-bottom: 5px;
+}
+
+.etiqueta-bio {
+    font-size: 0.8rem;
+    color: var(--texto-secundario);
+    margin-bottom: 10px;
+}
+
+.btn-ver-senderos {
+    display: block;
+    text-align: center;
+    background-color: var(--azul-pastel);
+    color: var(--azul-profundo);
+    padding: 6px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-ver-senderos:hover { 
+    background-color: var(--azul-cielo-suave); 
+}
+
+/* =========================================
+   SECCIÓN DE DESTINOS TURÍSTICOS (Con imágenes)
+   ========================================= */
+.seccion-destinos {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cabecera-seccion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cabecera-seccion h2 {
+    color: var(--verde-oscuro);
+    font-size: 2.1rem;
+    margin-bottom: 8px;
+}
+
+.cabecera-seccion p {
+    color: var(--texto-secundario);
+    font-size: 1.05rem;
+}
+
+.grid-destinos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.carta-destino {
+    background-color: var(--blanco);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(163, 177, 138, 0.2);
+}
+
+.carta-destino:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.img-destino {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.info-destino {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.badge-region {
+    display: inline-block;
+    background-color: var(--azul-pastel);
+    color: var(--azul-profundo);
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+.info-destino h3 {
+    font-size: 1.15rem;
+    color: var(--verde-oscuro);
+    margin-bottom: 8px;
+}
+
+.info-destino p {
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.btn-accion {
+    display: block;
+    text-align: center;
+    background-color: var(--verde-menta);
+    color: var(--verde-oscuro);
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.btn-accion:hover {
+    background-color: var(--verde-pastel);
+    color: var(--blanco);
+}
+
+/* =========================================
+   SECCIÓN DE BIODIVERSIDAD
+   ========================================= */
+.seccion-galeria-bio {
+    background-color: var(--blanco);
+    padding: 60px 20px;
+    border-top: 2px dashed var(--verde-pastel);
+    border-bottom: 2px dashed var(--verde-pastel);
+}
+
+.grid-biodiversidad {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carta-especie {
+    background-color: var(--fondo-sitio);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    border-bottom: 4px solid var(--verde-pastel);
+}
+
+.imagen-especie { height: 150px; width: 100%; }
+.imagen-especie.aves { background: linear-gradient(135deg, var(--azul-pastel), var(--azul-cielo-suave)); }
+.imagen-especie.anfibios { background: linear-gradient(135deg, var(--verde-menta), var(--verde-pastel)); }
+.imagen-especie.flora { background: linear-gradient(135deg, #d8f3dc, var(--verde-menta)); }
+
+.contenido-especie { padding: 20px; }
+.contenido-especie h3 { color: var(--verde-oscuro); margin-bottom: 8px; }
+.contenido-especie p { color: var(--texto-secundario); font-size: 0.9rem; }
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer-principal {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.footer-principal p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
